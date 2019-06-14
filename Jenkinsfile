@@ -10,7 +10,7 @@ pipeline {
                 sh 'ls -a'
                 sh 'git add .'
                 sh 'git commit -m "bumped parent version number"'
-                sh 'git push'
+                sh 'git checkout master'
             }
         }
     }
