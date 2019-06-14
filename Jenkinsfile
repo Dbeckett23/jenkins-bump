@@ -10,7 +10,8 @@ pipeline {
                 sh 'ls -a'
                 sh 'git add .'
                 sh 'git commit -m "bumped parent version number"'
-                sh 'git checkout master'
+                sh 'git checkout -b jenkins-automatic-version-bump'
+                sh 'git request-pull git@github.com:Dbeckett23/jenkins-bump.git jenkins-automatic-version-bump'
             }
         }
     }
