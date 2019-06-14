@@ -8,9 +8,9 @@ pipeline {
                 sh 'mvn build-helper:parse-version versions:set -DnewVersion=\\${parsedVersion.majorVersion}.\\${parsedVersion.minorVersion}.\\${parsedVersion.nextIncrementalVersion}'
                 sh 'pwd'
                 sh 'ls -a'
-                /*sh 'git add .'
+                sh 'git add .'
                 sh 'git commit -m "bumped parent version number"'
-                sh 'git push origin HEAD:master'*/
+                sh 'git push'
             }
         }
     }
