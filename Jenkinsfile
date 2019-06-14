@@ -12,6 +12,7 @@ pipeline {
                 sh 'git commit -m "bumped parent version number"'
                 sh 'git checkout -b jenkins-automatic-version-bump'
                 sh 'git request-pull git@github.com:Dbeckett23/jenkins-bump.git jenkins-automatic-version-bump'
+                // Aye lets make this thang work
             }
         }
     }
