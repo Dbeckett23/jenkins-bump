@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                echo 'Hello World!'
+                echo 'The Jenkins file appears to be working correctly.'
             }
         }
     }
