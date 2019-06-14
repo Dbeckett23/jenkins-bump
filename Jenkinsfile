@@ -9,6 +9,7 @@ pipeline {
                 sh 'git add .'
                 sh 'git commit -m "bumped parent version number"'
                 sh 'git push origin HEAD: master'
+                // comment
             }
         }
     }
