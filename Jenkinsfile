@@ -6,9 +6,10 @@ pipeline {
                 echo 'Hello World!'
                 echo 'The Jenkins file appears to be working correctly.'
                 sh 'mvn build-helper:parse-version versions:set -DnewVersion=\\${parsedVersion.majorVersion}.\\${parsedVersion.minorVersion}.\\${parsedVersion.nextIncrementalVersion}'
-                sh 'git add .'
+                pwd
+                /*sh 'git add .'
                 sh 'git commit -m "bumped parent version number"'
-                sh 'git push origin HEAD:master'
+                sh 'git push origin HEAD:master'*/
             }
         }
     }
