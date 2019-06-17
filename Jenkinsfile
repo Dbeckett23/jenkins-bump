@@ -18,7 +18,7 @@ pipeline {
                         "        \"title\": \"Jenkins automatic version bump\",\n" +
                         "        \"source\": {\n" +
                         "            \"branch\": {\n" +
-                        "                \"name\": \"jenkins-automatic-version-bump\"\n" +
+                        "                \"name\": \"master\"\n" +
                         "            }\n" +
                         "        }\n" +
                         "    }'"
