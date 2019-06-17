@@ -11,7 +11,7 @@ pipeline {
                 sh 'git add .'
                 sh 'git commit -m "bumped parent version number"'
                 sh 'git checkout -b jenkins-automatic-version-bump'
-                sh 'hub request-pull'
+
             }
         }
     }
