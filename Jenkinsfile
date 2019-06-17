@@ -10,8 +10,18 @@ pipeline {
                 sh 'ls -a'
                 sh 'git add .'
                 sh 'git commit -m "bumped parent version number"'
-                sh 'git checkout -b jenkins-automatic-version-bump'
-                sh 'hub request-pull'
+                sh "curl https://api.bitbucket.org/2.0/repositories/dustin-beckett/testing-jenkins-bump/pullrequests \\\n" +
+                        "    -u dustin.beckett@genesys.com:Hunter\\!2324 \\\n" +
+                        "    --request POST \\\n" +
+                        "    --header 'Content-Type: application/json' \\\n" +
+                        "    --data '{\n" +
+                        "        \"title\": \"Jenkins automatic version bump\",\n" +
+                        "        \"source\": {\n" +
+                        "            \"branch\": {\n" +
+                        "                \"name\": \"jenkins-automatic-version-bump\"\n" +
+                        "            }\n" +
+                        "        }\n" +
+                        "    }'"
             }
         }
     }
