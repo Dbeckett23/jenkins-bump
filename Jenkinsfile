@@ -7,6 +7,7 @@ pipeline {
                 echo 'The Jenkins file appears to be working correctly.'
                 sh 'pwd'
                 sh 'ls -a'
+                sh 'git status'
                 sh 'git checkout jenkins-automatic-version-bump'
                 sh 'mvn build-helper:parse-version versions:set -DnewVersion=\\${parsedVersion.majorVersion}.\\${parsedVersion.minorVersion}.\\${parsedVersion.nextIncrementalVersion}'
                 sh 'git add .'
