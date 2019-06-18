@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
 
-                node(){
+                node('version-bump'){
                     def v = 10;
                 }
 
