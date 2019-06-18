@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Hello World!'
-                echo 'The Jenkins file appears to be working correctly.'
+
+                script{
+                    println("Hello World!")
+                }
                 sh 'pwd'
                 sh 'ls -a'
                 sh 'git status'
