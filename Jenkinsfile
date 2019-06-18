@@ -4,9 +4,10 @@ pipeline {
         stage('build') {
             steps {
 
-                script{
-                    println("Hello World!")
+                node(){
+                    def v = 10;
                 }
+
                 sh 'pwd'
                 sh 'ls -a'
                 sh 'git status'
